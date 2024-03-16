@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>模幂</title>
+    <link href="/2024/03/16/%E6%A8%A1%E5%B9%82/"/>
+    <url>/2024/03/16/%E6%A8%A1%E5%B9%82/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">PowerMod</span>(<span class="hljs-params">a, n, m</span>):<br>    result = <span class="hljs-number">1</span><br>    <span class="hljs-keyword">while</span> n &gt; <span class="hljs-number">0</span>:<br>        <span class="hljs-comment"># 如果n是奇数，将结果乘以a并取模</span><br>        <span class="hljs-keyword">if</span> n % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>:<br>            result = (result * a) % m<br>        <span class="hljs-comment"># 将a自乘，并取模</span><br>        a = (a * a) % m<br>        <span class="hljs-comment"># 缩小指数</span><br>        n //= <span class="hljs-number">2</span><br><br>    <span class="hljs-keyword">return</span> result<br><br><span class="hljs-comment"># 调用函数计算 11^2023 (mod 314159)</span><br>result = PowerMod(<span class="hljs-number">11</span>, <span class="hljs-number">2023</span>, <span class="hljs-number">314159</span>)<br><span class="hljs-built_in">print</span>(result)<br><br>result = PowerMod(<span class="hljs-number">2</span>,<span class="hljs-number">20230911</span>,<span class="hljs-number">31415926535897932384626433832795028841</span>)<br><span class="hljs-built_in">print</span>(result)<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2024/03/16/title/"/>
+    <url>/2024/03/16/title/</url>
+    
+    <content type="html"><![CDATA[<hr><h2 id="title-titledate-2024-03-16-11-23-08tags"><a href="#title-titledate-2024-03-16-11-23-08tags" class="headerlink" title="title: titledate: 2024-03-16 11:23:08tags:"></a>title: title<br>date: 2024-03-16 11:23:08<br>tags:</h2><p>这是第一篇博客</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
