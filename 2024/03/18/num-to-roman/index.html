@@ -16,21 +16,21 @@
   <meta name="author" content="tuxintai">
   <meta name="keywords" content="">
   
-    <meta name="description" content="12345678910111213141516171819def PowerMod(a, n, m):    result &#x3D; 1    while n &gt; 0:        # 如果n是奇数，将结果乘以a并取模        if n % 2 &#x3D;&#x3D; 1:            result &#x3D; (result * a) % m        # 将a自乘，并取模        a &#x3D; (">
+    <meta name="description" content="123&#x2F;* 罗马数字规则：I（1），V（5)，x(10), L(50), C(100), D(500), M(1000)*&#x2F;  12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758#include &lt;stdio.h&gt;#incl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="模幂">
-<meta property="og:url" content="http://example.com/2024/03/16/%E6%A8%A1%E5%B9%82/index.html">
+<meta property="og:title" content="num_to_roman">
+<meta property="og:url" content="http://example.com/2024/03/18/num-to-roman/index.html">
 <meta property="og:site_name" content="土辛台">
-<meta property="og:description" content="12345678910111213141516171819def PowerMod(a, n, m):    result &#x3D; 1    while n &gt; 0:        # 如果n是奇数，将结果乘以a并取模        if n % 2 &#x3D;&#x3D; 1:            result &#x3D; (result * a) % m        # 将a自乘，并取模        a &#x3D; (">
+<meta property="og:description" content="123&#x2F;* 罗马数字规则：I（1），V（5)，x(10), L(50), C(100), D(500), M(1000)*&#x2F;  12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758#include &lt;stdio.h&gt;#incl">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-03-16T04:08:23.000Z">
-<meta property="article:modified_time" content="2024-03-16T04:10:11.071Z">
+<meta property="article:published_time" content="2024-03-18T14:48:38.000Z">
+<meta property="article:modified_time" content="2024-03-18T15:01:47.952Z">
 <meta property="article:author" content="tuxintai">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>模幂 - 土辛台</title>
+  <title>num_to_roman - 土辛台</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="模幂"></span>
+            <span id="subtitle" data-typed-text="num_to_roman"></span>
           
         </div>
 
@@ -207,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-03-16 12:08" pubdate>
-          2024年3月16日 中午
+        <time datetime="2024-03-18 22:48" pubdate>
+          2024年3月18日 晚上
         </time>
       </span>
     
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          69 字
+          353 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          1 分钟
+          3 分钟
         
       </span>
     
@@ -267,12 +267,14 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">模幂</h1>
+            <h1 id="seo-header">num_to_roman</h1>
             
             
               <div class="markdown-body">
                 
-                <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">PowerMod</span>(<span class="hljs-params">a, n, m</span>):<br>    result = <span class="hljs-number">1</span><br>    <span class="hljs-keyword">while</span> n &gt; <span class="hljs-number">0</span>:<br>        <span class="hljs-comment"># 如果n是奇数，将结果乘以a并取模</span><br>        <span class="hljs-keyword">if</span> n % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>:<br>            result = (result * a) % m<br>        <span class="hljs-comment"># 将a自乘，并取模</span><br>        a = (a * a) % m<br>        <span class="hljs-comment"># 缩小指数</span><br>        n //= <span class="hljs-number">2</span><br><br>    <span class="hljs-keyword">return</span> result<br><br><span class="hljs-comment"># 调用函数计算 11^2023 (mod 314159)</span><br>result = PowerMod(<span class="hljs-number">11</span>, <span class="hljs-number">2023</span>, <span class="hljs-number">314159</span>)<br><span class="hljs-built_in">print</span>(result)<br><br>result = PowerMod(<span class="hljs-number">2</span>,<span class="hljs-number">20230911</span>,<span class="hljs-number">31415926535897932384626433832795028841</span>)<br><span class="hljs-built_in">print</span>(result)<br></code></pre></td></tr></table></figure>
+                <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs C"><span class="hljs-comment">/* 罗马数字规则：</span><br><span class="hljs-comment">I（1），V（5)，x(10), L(50), C(100), D(500), M(1000)</span><br><span class="hljs-comment">*/</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;string.h&gt;</span></span><br><br><span class="hljs-type">char</span>* <span class="hljs-title function_">num_to_roman</span><span class="hljs-params">(<span class="hljs-type">int</span> num)</span>&#123;<br>    <span class="hljs-type">int</span> a = num / <span class="hljs-number">1000</span>；<br>    <span class="hljs-type">int</span> b = num % <span class="hljs-number">1000</span> / <span class="hljs-number">100</span>;<br>    <span class="hljs-type">int</span> c = num % <span class="hljs-number">100</span> / <span class="hljs-number">10</span>;<br>    <span class="hljs-type">int</span> d = num %;<br>    <span class="hljs-type">static</span> <span class="hljs-type">char</span> s[<span class="hljs-number">20</span>];<span class="hljs-comment">//静态数组，存结果</span><br>    s[<span class="hljs-number">0</span>] = <span class="hljs-string">&#x27;\0&#x27;</span>;<span class="hljs-comment">//确保数组为空</span><br>    <br>    <span class="hljs-keyword">if</span> (num &gt; <span class="hljs-number">0</span> &amp;&amp; num &lt; <span class="hljs-number">4000</span>) &#123;<br>        <span class="hljs-comment">// 千位</span><br>        <span class="hljs-keyword">if</span> (a == <span class="hljs-number">1</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;M&quot;</span>);<br>        <span class="hljs-keyword">if</span> (a == <span class="hljs-number">2</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;MM&quot;</span>);<br>        <span class="hljs-keyword">if</span> (a == <span class="hljs-number">3</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;MMM&quot;</span>);<br>        <span class="hljs-comment">// 百位</span><br>        <span class="hljs-keyword">if</span> (b == <span class="hljs-number">1</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;C&quot;</span>);<br>        <span class="hljs-keyword">if</span> (b == <span class="hljs-number">2</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;CC&quot;</span>);<br>        <span class="hljs-keyword">if</span> (b == <span class="hljs-number">3</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;CCC&quot;</span>);<br>        <span class="hljs-keyword">if</span> (b == <span class="hljs-number">4</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;CD&quot;</span>);<br>        <span class="hljs-keyword">if</span> (b == <span class="hljs-number">5</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;D&quot;</span>);<br>        <span class="hljs-keyword">if</span> (b == <span class="hljs-number">6</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;DC&quot;</span>);<br>        <span class="hljs-keyword">if</span> (b == <span class="hljs-number">7</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;DCC&quot;</span>);<br>        <span class="hljs-keyword">if</span> (b == <span class="hljs-number">8</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;DCCC&quot;</span>);<br>        <span class="hljs-keyword">if</span> (b == <span class="hljs-number">9</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;CM&quot;</span>);<br>        <span class="hljs-comment">// 十位</span><br>        <span class="hljs-keyword">if</span> (c == <span class="hljs-number">1</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;X&quot;</span>);<br>        <span class="hljs-keyword">if</span> (c == <span class="hljs-number">2</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;XX&quot;</span>);<br>        <span class="hljs-keyword">if</span> (c == <span class="hljs-number">3</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;XXX&quot;</span>);<br>        <span class="hljs-keyword">if</span> (c == <span class="hljs-number">4</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;XL&quot;</span>);<br>        <span class="hljs-keyword">if</span> (c == <span class="hljs-number">5</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;L&quot;</span>);<br>        <span class="hljs-keyword">if</span> (c == <span class="hljs-number">6</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;LX&quot;</span>);<br>        <span class="hljs-keyword">if</span> (c == <span class="hljs-number">7</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;LXX&quot;</span>);<br>        <span class="hljs-keyword">if</span> (c == <span class="hljs-number">8</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;LXXX&quot;</span>);<br>        <span class="hljs-keyword">if</span> (c == <span class="hljs-number">9</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;XC&quot;</span>);<br>        <span class="hljs-comment">// 个位</span><br>        <span class="hljs-keyword">if</span> (d == <span class="hljs-number">1</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;I&quot;</span>);<br>        <span class="hljs-keyword">if</span> (d == <span class="hljs-number">2</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;II&quot;</span>);<br>        <span class="hljs-keyword">if</span> (d == <span class="hljs-number">3</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;III&quot;</span>);<br>        <span class="hljs-keyword">if</span> (d == <span class="hljs-number">4</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;IV&quot;</span>);<br>        <span class="hljs-keyword">if</span> (d == <span class="hljs-number">5</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;V&quot;</span>);<br>        <span class="hljs-keyword">if</span> (d == <span class="hljs-number">6</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;VI&quot;</span>);<br>        <span class="hljs-keyword">if</span> (d == <span class="hljs-number">7</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;VII&quot;</span>);<br>        <span class="hljs-keyword">if</span> (d == <span class="hljs-number">8</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;VIII&quot;</span>);<br>        <span class="hljs-keyword">if</span> (d == <span class="hljs-number">9</span>) <span class="hljs-built_in">strcat</span>(s, <span class="hljs-string">&quot;IX&quot;</span>);<br>    &#125;<br>    <span class="hljs-keyword">return</span> s;<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Please enter an integer ranging from 0 to 4000\n&quot;</span>);<br>    <span class="hljs-type">int</span> num;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;num);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s\n&quot;</span>, NumTORoman(num));<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
                 
@@ -291,8 +293,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>模幂</div>
-      <div>http://example.com/2024/03/16/模幂/</div>
+      <div>num_to_roman</div>
+      <div>http://example.com/2024/03/18/num-to-roman/</div>
     </div>
     <div class="license-meta">
       
@@ -304,7 +306,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年3月16日</div>
+          <div>2024年3月18日</div>
         </div>
       
       
@@ -336,18 +338,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/03/18/num-to-roman/" title="num_to_roman">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">num_to_roman</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/03/16/title/" title="">
-                        <span class="hidden-mobile"></span>
+                      <a href="/2024/03/16/%E6%A8%A1%E5%B9%82/" title="模幂">
+                        <span class="hidden-mobile">模幂</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
