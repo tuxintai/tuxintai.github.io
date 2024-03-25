@@ -16,22 +16,22 @@
   <meta name="author" content="tuxintai">
   <meta name="keywords" content="">
   
-    <meta name="description" content="12345678910111213141516171819def PowerMod(a, n, m):    result &#x3D; 1    while n &gt; 0:        # 如果n是奇数，将结果乘以a并取模        if n % 2 &#x3D;&#x3D; 1:            result &#x3D; (result * a) % m        # 将a自乘，并取模        a &#x3D; (">
+    <meta name="description" content="123456789101112131415161718192021222324&#x2F;*1.问题描述：给定半径r,求圆的面积2.输入整数r3.输出：输出一个实数，保留小数点后7位4.样式：    输入：4    输出：50.26548255.数据规模：1 &lt;&#x3D; r &lt;&#x3D; 100006.使用数学公式求Π： PI &#x3D; atan(1.0)*4 *&#x2F;#include &lt;stdio.h&gt;#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="模幂">
-<meta property="og:url" content="http://example.com/2024/03/16/%E6%A8%A1%E5%B9%82/index.html">
+<meta property="og:title" content="圆的面积">
+<meta property="og:url" content="http://example.com/2024/03/25/%E5%9C%86%E7%9A%84%E9%9D%A2%E7%A7%AF/index.html">
 <meta property="og:site_name" content="土辛台">
-<meta property="og:description" content="12345678910111213141516171819def PowerMod(a, n, m):    result &#x3D; 1    while n &gt; 0:        # 如果n是奇数，将结果乘以a并取模        if n % 2 &#x3D;&#x3D; 1:            result &#x3D; (result * a) % m        # 将a自乘，并取模        a &#x3D; (">
+<meta property="og:description" content="123456789101112131415161718192021222324&#x2F;*1.问题描述：给定半径r,求圆的面积2.输入整数r3.输出：输出一个实数，保留小数点后7位4.样式：    输入：4    输出：50.26548255.数据规模：1 &lt;&#x3D; r &lt;&#x3D; 100006.使用数学公式求Π： PI &#x3D; atan(1.0)*4 *&#x2F;#include &lt;stdio.h&gt;#">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-03-16T04:08:23.000Z">
-<meta property="article:modified_time" content="2024-03-25T14:04:53.049Z">
+<meta property="article:published_time" content="2024-03-25T14:18:22.000Z">
+<meta property="article:modified_time" content="2024-03-25T14:22:11.223Z">
 <meta property="article:author" content="tuxintai">
-<meta property="article:tag" content="python">
+<meta property="article:tag" content="C">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>模幂 - 土辛台</title>
+  <title>圆的面积 - 土辛台</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="模幂"></span>
+            <span id="subtitle" data-typed-text="圆的面积"></span>
           
         </div>
 
@@ -208,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-03-16 12:08" pubdate>
-          2024年3月16日 中午
+        <time datetime="2024-03-25 22:18" pubdate>
+          2024年3月25日 晚上
         </time>
       </span>
     
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          69 字
+          134 字
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -268,13 +268,14 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">模幂</h1>
+            <h1 id="seo-header">圆的面积</h1>
             
             
               <div class="markdown-body">
                 
-                <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">PowerMod</span>(<span class="hljs-params">a, n, m</span>):<br>    result = <span class="hljs-number">1</span><br>    <span class="hljs-keyword">while</span> n &gt; <span class="hljs-number">0</span>:<br>        <span class="hljs-comment"># 如果n是奇数，将结果乘以a并取模</span><br>        <span class="hljs-keyword">if</span> n % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>:<br>            result = (result * a) % m<br>        <span class="hljs-comment"># 将a自乘，并取模</span><br>        a = (a * a) % m<br>        <span class="hljs-comment"># 缩小指数</span><br>        n //= <span class="hljs-number">2</span><br><br>    <span class="hljs-keyword">return</span> result<br><br><span class="hljs-comment"># 调用函数计算 11^2023 (mod 314159)</span><br>result = PowerMod(<span class="hljs-number">11</span>, <span class="hljs-number">2023</span>, <span class="hljs-number">314159</span>)<br><span class="hljs-built_in">print</span>(result)<br><br>result = PowerMod(<span class="hljs-number">2</span>,<span class="hljs-number">20230911</span>,<span class="hljs-number">31415926535897932384626433832795028841</span>)<br><span class="hljs-built_in">print</span>(result)<br></code></pre></td></tr></table></figure>
+                <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">/*</span><br><span class="hljs-comment">1.问题描述：给定半径r,求圆的面积</span><br><span class="hljs-comment">2.输入整数r</span><br><span class="hljs-comment">3.输出：输出一个实数，保留小数点后7位</span><br><span class="hljs-comment">4.样式：</span><br><span class="hljs-comment">    输入：4</span><br><span class="hljs-comment">    输出：50.2654825</span><br><span class="hljs-comment">5.数据规模：1 &lt;= r &lt;= 10000</span><br><span class="hljs-comment">6.使用数学公式求Π： PI = atan(1.0)*4 </span><br><span class="hljs-comment">*/</span><br><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;math.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>    <span class="hljs-type">int</span> r;<br>    <span class="hljs-type">double</span> s, PI;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;r);<br>    PI = <span class="hljs-built_in">atan</span>(<span class="hljs-number">1.0</span>)*<span class="hljs-number">4</span>;<br>    s = PI * r * r;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%.7lf\n&quot;</span>, s);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
+<p>分析：注意保留小数点的打印格式，利用数学公式Π：PI&#x3D;atan(1.0)*4</p>
 
                 
               </div>
@@ -293,7 +294,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%AF%8F%E6%97%A5%E7%AE%97%E6%B3%95/" class="category-chain-item">每日算法</a>
+  <a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" class="category-chain-item">蓝桥杯</a>
   
   
 
@@ -308,7 +309,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/python/" class="print-no-link">#python</a>
+        <a href="/tags/C/" class="print-no-link">#C</a>
       
     </div>
   
@@ -320,8 +321,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>模幂</div>
-      <div>http://example.com/2024/03/16/模幂/</div>
+      <div>圆的面积</div>
+      <div>http://example.com/2024/03/25/圆的面积/</div>
     </div>
     <div class="license-meta">
       
@@ -333,7 +334,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年3月16日</div>
+          <div>2024年3月25日</div>
         </div>
       
       
@@ -365,15 +366,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/03/18/num-to-roman/" title="num_to_roman">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">num_to_roman</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2024/03/25/Fibonacci/" title="Fibonacci">
+                        <span class="hidden-mobile">Fibonacci</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
