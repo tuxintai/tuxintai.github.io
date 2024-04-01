@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>RSA算法实现</title>
+    <link href="/2024/04/01/RSA%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/"/>
+    <url>/2024/04/01/RSA%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 信安</span><br><span class="hljs-comment"># 土辛台</span><br><span class="hljs-comment"># 开发时间  23:01</span><br><span class="hljs-comment">#实现RSA算法分7步</span><br><span class="hljs-comment">#1. 选择一对不相等的素数p,q: 用到素数检验（费马小定理）</span><br><span class="hljs-comment">#2，令n = p * q</span><br><span class="hljs-comment">#3. 计算n的欧拉函数phi_n = (p - 1) * (q - 1)</span><br><span class="hljs-comment">#4，选一个和n互素的整数 e = 3</span><br><span class="hljs-comment">#5. 计算e模phi_n的逆元d: 用到扩展欧几里得算法</span><br><span class="hljs-comment">#6. 公钥KU = (e, n)</span><br><span class="hljs-comment">#7. 私钥KR = (d, p, q)</span><br><span class="hljs-comment">#明文M --&gt;加密： M^e mod n = C： 模乘</span><br><span class="hljs-comment">#密文C --&gt;解密： C^d mod n = M： 模乘</span><br><span class="hljs-keyword">import</span> math<br><span class="hljs-keyword">import</span>  random<br><span class="hljs-comment">#模乘</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">power</span>(<span class="hljs-params">base, exponent, modulus</span>):<br>    result = <span class="hljs-number">1</span><br>    base = base % modulus<span class="hljs-comment">#对底数取模，防止溢出</span><br><br>    <span class="hljs-keyword">while</span> exponent &gt; <span class="hljs-number">0</span>:<br>        <span class="hljs-keyword">if</span> exponent % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>:<br>            result = (result * base) % modulus<br>        exponent = exponent // <span class="hljs-number">2</span><br>        base = (base * base) % modulus<br>    <span class="hljs-keyword">return</span> result<br><br><span class="hljs-comment">#a = power(4, 2, 5)</span><br><span class="hljs-comment">#print(a)</span><br><br><span class="hljs-comment">#费马测试</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">fermat_test</span>(<span class="hljs-params">a, N</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">    费马小定理：</span><br><span class="hljs-string">        如果N是素数，则a^(N-1) - 1 能被 N 整除</span><br><span class="hljs-string">        a^(N-1) mod N = 1;</span><br><span class="hljs-string">    &#x27;&#x27;&#x27;</span><br>    <span class="hljs-keyword">if</span> N == <span class="hljs-number">2</span>:<span class="hljs-comment">#2是素数</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br>    <span class="hljs-keyword">if</span> N % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>:<span class="hljs-comment">#能被2整除的不是素数</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br>    <span class="hljs-keyword">return</span> power(a, N - <span class="hljs-number">1</span>, N) == <span class="hljs-number">1</span><br><br><span class="hljs-comment">#b = fermat_test(7, 13)</span><br><span class="hljs-comment">#print(b)</span><br><br><span class="hljs-comment">#素性测试</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">is_prime</span>(<span class="hljs-params">N, rounds = <span class="hljs-number">5</span></span>):<br>    <span class="hljs-keyword">if</span> N &lt;= <span class="hljs-number">1</span>:<span class="hljs-comment">#小于等于1的不是素数</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br>    <span class="hljs-keyword">if</span> N &lt;= <span class="hljs-number">3</span>:<span class="hljs-comment">#2，3是素数</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br><br>    <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(rounds):<br>        <span class="hljs-comment">#随机生成2到N-1的数去测试</span><br>        a = random.randint(<span class="hljs-number">2</span>, N - <span class="hljs-number">1</span>)<br>        <span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">        random.randint(a,b)是python标准库中&#x27;random&#x27;模块提供的函数</span><br><span class="hljs-string">        用于随机生成(a,b)之间的整数</span><br><span class="hljs-string">        &#x27;&#x27;&#x27;</span><br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> fermat_test(a, N):<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br><br><span class="hljs-comment">#a = is_prime(139)</span><br><span class="hljs-comment">#print(a)</span><br><br><span class="hljs-comment">#随机生成素数p</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">random_prime</span>(<span class="hljs-params">low, high</span>):<br>    p = random.randint(low, high)<br>    <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> is_prime(p):<br>        p = random.randint(low, high)<br>    <span class="hljs-keyword">return</span> p<br><br><span class="hljs-comment">#欧几里得返回向量（d, x, y)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">ext_gcd</span>(<span class="hljs-params">a,b</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">    利用递归实现欧几里得算法：</span><br><span class="hljs-string">        a &gt; b: a = b*q + r, 如果 r=0 ,b就是最大公约数d,否则将b赋值给a，r赋值给b，返回上一步。———&gt;算出最大公约数d</span><br><span class="hljs-string">    用扩展欧几里得算法算出系数x,y:</span><br><span class="hljs-string">        a&gt;b: b=0时，d=a, x=1, y=0</span><br><span class="hljs-string">        a = (a/b)*b + a%b:</span><br><span class="hljs-string">        gcd(a,b) = x*a + y*b  -&gt;1</span><br><span class="hljs-string">        gcd(b,a%b) = x&#x27;*b + y&#x27;*(a%b) -&gt;2</span><br><span class="hljs-string">        结合1,2--&gt; x*a + y*b = x&#x27;*b + y&#x27;* a%b 又a%b= a-(a/b)*b</span><br><span class="hljs-string">        --&gt;x*a + y*b = x&#x27;*b + y&#x27;*[a-(a/b)*b] = y&#x27;*a + x&#x27;-y&#x27;(a/b)*b</span><br><span class="hljs-string">        --&gt; x = y&#x27;, y = x&#x27;-y&#x27;(a/b)</span><br><span class="hljs-string">    &#x27;&#x27;&#x27;</span><br><br>    <span class="hljs-keyword">if</span> b == <span class="hljs-number">0</span>:<br>        <span class="hljs-keyword">return</span> a, <span class="hljs-number">1</span>, <span class="hljs-number">0</span><br>    <span class="hljs-keyword">else</span>:<br>        d, x, y = ext_gcd(b, a % b)<br>        <span class="hljs-keyword">return</span> d, y, x - (a // b)*y<br><br><span class="hljs-comment">#计算模逆</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">inv_mod</span>(<span class="hljs-params">a, m</span>):<br>    d, x, y = ext_gcd(a, m)<br>    <span class="hljs-keyword">if</span> d != <span class="hljs-number">1</span>:<br>        <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">&quot;Inverse does not exist&quot;</span>)<span class="hljs-comment">#抛出异常</span><br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">return</span> (x % m + m) % m<span class="hljs-comment">#确保模逆在[0,b)</span><br><br><br><span class="hljs-comment">#生成密钥</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">rsa_keygen</span>(<span class="hljs-params">k</span>):<br>    <span class="hljs-comment">#随机生成位于(2^(k-1), 2^k) 的数p,q</span><br>    p = random_prime(<span class="hljs-number">2</span>**(k-<span class="hljs-number">1</span>), <span class="hljs-number">2</span>**k)<br>    q = random_prime(<span class="hljs-number">2</span>**(k-<span class="hljs-number">1</span>), <span class="hljs-number">2</span>**k)<br><br>    <span class="hljs-comment">#避免p = q</span><br>    <span class="hljs-keyword">while</span> p == q:<br>        q = random_prime(<span class="hljs-number">2</span>**(k - <span class="hljs-number">1</span>), <span class="hljs-number">2</span>**k)<br>    <span class="hljs-comment">#大整数N：</span><br>    N = p*q<br>    <span class="hljs-comment">#求欧拉函数：</span><br>    phi_N = (p -<span class="hljs-number">1</span>) * (q -<span class="hljs-number">1</span>)<br>    <span class="hljs-comment">#定义e = 3</span><br>    e = <span class="hljs-number">3</span><br><br>    <span class="hljs-comment">#确保模逆的存在</span><br>    <span class="hljs-keyword">try</span>:<br>        d = inv_mod(e, phi_N)<br>    <span class="hljs-keyword">except</span> ValueError:<br>        <span class="hljs-keyword">return</span> rsa_keygen(k)<br><br>    <span class="hljs-comment">#生成公钥私钥：</span><br>    pubkey = (e, N)<br>    prikey = (d, p, q)<br><br>    <span class="hljs-keyword">return</span> ( pubkey, prikey)<br><br><span class="hljs-comment">#加密</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">enc</span>(<span class="hljs-params">m_text, pubkey</span>):<br><br>    e = pubkey[<span class="hljs-number">0</span>]<br>    N = pubkey[<span class="hljs-number">1</span>]<br><br>    <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(m_text, <span class="hljs-built_in">str</span>):<br>        <span class="hljs-comment">#ord 接受一个字符作为参数，返回一个ASCII码</span><br>        Unicode_m_text = [<span class="hljs-built_in">ord</span>(char) <span class="hljs-keyword">for</span> char <span class="hljs-keyword">in</span> m_text]<br>        ciphertext = [power(char, e, N) <span class="hljs-keyword">for</span> char <span class="hljs-keyword">in</span> Unicode_m_text]<br>    <span class="hljs-keyword">elif</span> <span class="hljs-built_in">isinstance</span>(m_text, <span class="hljs-built_in">int</span>):<br>        ciphertext = power(m_text, e, N)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Encryption of non-str, int data types is not currently supported.&quot;</span>)<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">None</span><br><br>    <span class="hljs-keyword">return</span> ciphertext<br><br><span class="hljs-comment">#解密</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">dec</span>(<span class="hljs-params">e_text, prikey</span>):<br><br>    d, p, q = prikey<br><br>    <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(e_text, <span class="hljs-built_in">list</span>):<br>        decrypted_str = [power(char, d, p * q) <span class="hljs-keyword">for</span> char <span class="hljs-keyword">in</span> e_text]<br>        <span class="hljs-comment">#chr接受一个ASCII码作为参数，返回对应的字符</span><br>        decrypt = <span class="hljs-string">&#x27;&#x27;</span>.join([<span class="hljs-built_in">chr</span>(code) <span class="hljs-keyword">for</span> code <span class="hljs-keyword">in</span> decrypted_str])<br>    <span class="hljs-keyword">else</span>:<br>        decrypt = power(e_text, d, p * q)<br><br>    <span class="hljs-keyword">return</span> decrypt<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:<br>    pubkey, prikey = rsa_keygen(<span class="hljs-number">128</span>)<br><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;公钥：&quot;</span>, pubkey)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;私钥：&quot;</span>, prikey)<br><br>    <span class="hljs-comment"># 对314加密和解密</span><br>    message = <span class="hljs-number">314</span><br>    encrypted = enc(message, pubkey)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;314加密后的信息为：&quot;</span>, encrypted)<br>    decrypted = dec(encrypted, prikey)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;解密后的信息是：&quot;</span>, decrypted)<br><br>    message = <span class="hljs-string">&quot;芙蓉王源&quot;</span><br>    encrypted = enc(message, pubkey)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;芙蓉王源加密后的信息为：&quot;</span>, encrypted)<br>    decrypted = dec(encrypted, prikey)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;解密后的信息是：&quot;</span>, decrypted)<br><br><br><br><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>算法概论作业</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>计算机网络的概念</title>
     <link href="/2024/03/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     <url>/2024/03/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</url>
@@ -129,57 +154,6 @@
   
   
   <entry>
-    <title>域</title>
-    <link href="/2024/03/21/%E5%9F%9F/"/>
-    <url>/2024/03/21/%E5%9F%9F/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>环</title>
-    <link href="/2024/03/21/%E7%8E%AF/"/>
-    <url>/2024/03/21/%E7%8E%AF/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>信息安全数学基础</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>群</title>
-    <link href="/2024/03/21/%E7%BE%A4/"/>
-    <url>/2024/03/21/%E7%BE%A4/</url>
-    
-    <content type="html"><![CDATA[<h1 id="群"><a href="#群" class="headerlink" title="群"></a><strong>群</strong></h1><h2 id="群的定义："><a href="#群的定义：" class="headerlink" title="群的定义："></a>群的定义：</h2><img src="https://raw.githubusercontent.com/tuxintai/tuxintai-PicGoImgs/main/D%3A%5CPicGo%5Cimge/群的定义.png" style="zoom:50%;" />]]></content>
-    
-    
-    <categories>
-      
-      <category>信息安全数学基础</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>num_to_roman</title>
     <link href="/2024/03/18/num-to-roman/"/>
     <url>/2024/03/18/num-to-roman/</url>
@@ -197,31 +171,6 @@
     <tags>
       
       <tag>C</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>模幂</title>
-    <link href="/2024/03/16/%E6%A8%A1%E5%B9%82/"/>
-    <url>/2024/03/16/%E6%A8%A1%E5%B9%82/</url>
-    
-    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">PowerMod</span>(<span class="hljs-params">a, n, m</span>):<br>    result = <span class="hljs-number">1</span><br>    <span class="hljs-keyword">while</span> n &gt; <span class="hljs-number">0</span>:<br>        <span class="hljs-comment"># 如果n是奇数，将结果乘以a并取模</span><br>        <span class="hljs-keyword">if</span> n % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>:<br>            result = (result * a) % m<br>        <span class="hljs-comment"># 将a自乘，并取模</span><br>        a = (a * a) % m<br>        <span class="hljs-comment"># 缩小指数</span><br>        n //= <span class="hljs-number">2</span><br><br>    <span class="hljs-keyword">return</span> result<br><br><span class="hljs-comment"># 调用函数计算 11^2023 (mod 314159)</span><br>result = PowerMod(<span class="hljs-number">11</span>, <span class="hljs-number">2023</span>, <span class="hljs-number">314159</span>)<br><span class="hljs-built_in">print</span>(result)<br><br>result = PowerMod(<span class="hljs-number">2</span>,<span class="hljs-number">20230911</span>,<span class="hljs-number">31415926535897932384626433832795028841</span>)<br><span class="hljs-built_in">print</span>(result)<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    <categories>
-      
-      <category>每日算法</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>python</tag>
       
     </tags>
     
