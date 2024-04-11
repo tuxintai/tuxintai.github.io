@@ -274,10 +274,8 @@
               <div class="markdown-body">
                 
                 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">/*</span><br><span class="hljs-comment">1.Fibonacci数列：</span><br><span class="hljs-comment">    F(n) = F(n-1) + F(n-2)</span><br><span class="hljs-comment">    F(1) = 1, F(2) = 1</span><br><span class="hljs-comment">2.题目：</span><br><span class="hljs-comment">    求F(n) / 10007 的余数</span><br><span class="hljs-comment">3.数据规模与约定:</span><br><span class="hljs-comment">    1 &lt;= n &lt;= 1,000,000</span><br><span class="hljs-comment">*/</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> mod 10007</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> max_num 1000001</span><br><span class="hljs-type">int</span> n, i, F[max_num];<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>     <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;n);<br>     F[<span class="hljs-number">1</span>] = <span class="hljs-number">1</span>;<br>     F[<span class="hljs-number">2</span>] = <span class="hljs-number">1</span>;<br>     <span class="hljs-keyword">for</span>(i = <span class="hljs-number">3</span>; i &lt;= n; ++i)<br>     &#123;<br>        F[i] = (F[i<span class="hljs-number">-1</span>] + F[i<span class="hljs-number">-2</span>]) % mod;<br>     &#125;<br><br>     <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>, F[n]);<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 <p>分析：因为题目要求F(n)%10007,不需要求F(n),所以直接求余数</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs C">F[i] = (F[i<span class="hljs-number">-1</span>] + F[i<span class="hljs-number">-2</span>]) % mod；	<br></code></pre></td></tr></table></figure>
-
 
                 
               </div>
@@ -646,5 +644,21 @@
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 </body>
 </html>

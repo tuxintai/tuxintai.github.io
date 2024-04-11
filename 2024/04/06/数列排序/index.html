@@ -24,7 +24,7 @@
 <meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566#include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;&#x2F;&#x2F;打印函数void print(int *data,">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-04-06T03:42:58.000Z">
-<meta property="article:modified_time" content="2024-04-06T03:51:10.404Z">
+<meta property="article:modified_time" content="2024-04-11T08:47:56.849Z">
 <meta property="article:author" content="tuxintai">
 <meta property="article:tag" content="C">
 <meta name="twitter:card" content="summary_large_image">
@@ -274,7 +274,6 @@
               <div class="markdown-body">
                 
                 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdlib.h&gt;</span></span><br><br><span class="hljs-comment">//打印函数</span><br><span class="hljs-type">void</span> <span class="hljs-title function_">print</span><span class="hljs-params">(<span class="hljs-type">int</span> *data, <span class="hljs-type">int</span> n)</span><br>&#123;<br>    <span class="hljs-type">int</span> i;<br>    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; n; i++ )<br>    &#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d &quot;</span>, data[i]);<br>    &#125;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\n&quot;</span>);<br>&#125;<br><br><span class="hljs-comment">//分割函数</span><br><span class="hljs-type">int</span> <span class="hljs-title function_">split</span><span class="hljs-params">(<span class="hljs-type">int</span> *data, <span class="hljs-type">int</span> pre, <span class="hljs-type">int</span> rear)</span><br>&#123;<br>    <span class="hljs-type">int</span> value = data[pre];<span class="hljs-comment">//用第一个数为基准值</span><br>    <span class="hljs-keyword">while</span>(pre &lt; rear)<br>    &#123;<br>        <span class="hljs-keyword">while</span> (data[rear] &gt;= value &amp;&amp; pre &lt; rear)<br>        &#123;<br>            rear--;<br>        &#125;<br>        data[pre] = data[rear];<br>        <span class="hljs-keyword">while</span> (data[pre] &lt; value &amp;&amp; pre &lt; rear)<br>        &#123;<br>            pre++;<br>        &#125;<br>        data[rear] = data[pre];<br>    &#125;<br><br>    data[pre] = value;<br>    <span class="hljs-keyword">return</span> pre;<span class="hljs-comment">//返回基准值，为了方便后序递归调用快速排序时确认下次切割的起始位置</span><br>&#125;<br><br><span class="hljs-comment">//快速排序</span><br><span class="hljs-type">void</span> <span class="hljs-title function_">quick_sort</span><span class="hljs-params">(<span class="hljs-type">int</span> *data, <span class="hljs-type">int</span> pre, <span class="hljs-type">int</span> rear)</span><br>&#123;<br>   <br>    <span class="hljs-keyword">if</span> (pre &lt; rear)<br>    &#123;<br>        <span class="hljs-type">int</span> mid = split(data, pre, rear);<br>        quick_sort(data, pre, mid - <span class="hljs-number">1</span>);<br>        quick_sort(data, mid + <span class="hljs-number">1</span>, rear);<br><br>    &#125;<br>    <br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>    <span class="hljs-type">int</span> i;<br>    <span class="hljs-type">int</span> n;<br>    <span class="hljs-type">int</span> *data;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;n);<br>    data = (<span class="hljs-type">int</span>*)<span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(<span class="hljs-type">int</span>)*n);<br>    <span class="hljs-keyword">for</span> ( i = <span class="hljs-number">0</span>; i &lt; n; i++)<br>    &#123;<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;data[i]);<br>    &#125;<br>    quick_sort(data, <span class="hljs-number">0</span>, n - <span class="hljs-number">1</span>);<br>    print(data, n);<br>    <span class="hljs-built_in">free</span>(data);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 
                 
               </div>
@@ -643,5 +642,21 @@
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 </body>
 </html>
