@@ -1,975 +1,1060 @@
-
-
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
-
-
-
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/face.png">
-  <link rel="icon" href="/img/face.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="tuxintai">
-  <meta name="keywords" content="">
-  
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/bitbug_favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/bitbug_favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
     <meta name="description" content="你好">
-<meta property="og:type" content="website">
+<meta property="og:type" content="blog">
 <meta property="og:title" content="土辛台">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="土辛台">
 <meta property="og:description" content="你好">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="tuxintai">
-<meta name="twitter:card" content="summary_large_image">
-  
-  
-  
-  <title>土辛台</title>
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
-
-
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<!-- Do not modify the link that theme dependent icons -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
-
-
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6,h7","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
-
-    if (CONFIG.web_analytics.follow_dnt) {
-      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
-      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
-    }
-  </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
-  
-
-
-  
-<meta name="generator" content="Hexo 7.1.1"></head>
-
-
-<body>
-  
-
-  <header>
-    
-
-<div class="header-inner" style="height: 100vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>tuxintai</strong>
-    </a>
-
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/" target="_self">
-                <i class="iconfont icon-home-fill"></i>
-                <span>首页</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/" target="_self">
-                <i class="iconfont icon-archive-fill"></i>
-                <span>归档</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/" target="_self">
-                <i class="iconfont icon-category-fill"></i>
-                <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/" target="_self">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/" target="_self">
-                <i class="iconfont icon-user-fill"></i>
-                <span>关于</span>
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <i class="iconfont icon-search"></i>
-            </a>
-          </li>
-          
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
-              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  
-
-<div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="首页"></span>
-          
-        </div>
-
-        
-      </div>
-
-      
-        <div class="scroll-down-bar">
-          <i class="iconfont icon-arrowdown"></i>
-        </div>
-      
-    </div>
-  </div>
-</div>
-
-</div>
-
-  </header>
-
-  <main>
-    
-      <div class="container nopadding-x-md">
-        <div id="board"
-          style="margin-top: 0">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/03/18/num-to-roman/" target="_self">
-          num_to_roman
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/18/num-to-roman/" target="_self">
-        <div>
-          123/* 罗马数字规则：I（1），V（5)，x(10), L(50), C(100), D(500), M(1000)*/ 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758#include &lt;stdio.h&gt;#inclu
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-18 22:48" pubdate>
-              2024-03-18
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E6%AF%8F%E6%97%A5%E7%AE%97%E6%B3%95/" class="category-chain-item">每日算法</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/C/">#C</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/03/25/%E4%BA%8C%E5%88%86%E6%B3%95/" target="_self">
-          二分法
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/25/%E4%BA%8C%E5%88%86%E6%B3%95/" target="_self">
-        <div>
-          二分法代码实现：1234567891011121314151617int search(int* nums, int num_size, int target) &#123;    int left = 0;    int right = num_size - 1;    while (left &lt;= right)&#123;        int middle = left + (righ
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-25 20:32" pubdate>
-              2024-03-25
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E6%AF%8F%E6%97%A5%E7%AE%97%E6%B3%95/" class="category-chain-item">每日算法</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/C/">#C</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/03/25/Fibonacci/" target="_self">
-          Fibonacci
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/25/Fibonacci/" target="_self">
-        <div>
-          1234567891011121314151617181920212223242526272829/*1.Fibonacci数列：    F(n) = F(n-1) + F(n-2)    F(1) = 1, F(2) = 12.题目：    求F(n) / 10007 的余数3.数据规模与约定:    1 &lt;= n &lt;= 1,000,000*/#include &lt;stdio.h
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-25 21:57" pubdate>
-              2024-03-25
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" class="category-chain-item">蓝桥杯</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/C/">#C</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/03/25/%E5%9C%86%E7%9A%84%E9%9D%A2%E7%A7%AF/" target="_self">
-          圆的面积
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/25/%E5%9C%86%E7%9A%84%E9%9D%A2%E7%A7%AF/" target="_self">
-        <div>
-          123456789101112131415161718192021222324/*1.问题描述：给定半径r,求圆的面积2.输入整数r3.输出：输出一个实数，保留小数点后7位4.样式：    输入：4    输出：50.26548255.数据规模：1 &lt;= r &lt;= 100006.使用数学公式求Π： PI = atan(1.0)*4 */#include &lt;stdio.h&gt;#
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-25 22:18" pubdate>
-              2024-03-25
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" class="category-chain-item">蓝桥杯</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/C/">#C</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/03/25/%E5%BA%8F%E5%88%97%E6%B1%82%E5%92%8C/" target="_self">
-          序列求和
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/25/%E5%BA%8F%E5%88%97%E6%B1%82%E5%92%8C/" target="_self">
-        <div>
-          12345678910111213141516171819202122/*1.问题：求1+2+……+n的值2.数据规模：    1 &lt;= n &lt;= 10000000003.注意：答案可能不在int的范围内，使用%I64d来输出long long 类型整数4.求和公式：    Sn = n(n+1) / 2*/#include &lt;stdio.h&gt;int main()&#123
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-25 22:45" pubdate>
-              2024-03-25
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
+<meta name="twitter:card" content="summary">
 
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" class="category-chain-item">蓝桥杯</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/C/">#C</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/03/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" target="_self">
-          计算机网络的概念
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" target="_self">
-        <div>
-          计算机网络的概念​        计算机网络是一个将众多分散的，自治的的计算机系统，通过通讯设备与线路连接起来，由功能完善的软件实现资源共享和信息传递的系统  计算机网络:由若干个节点和连接这些节点的链路组成1.组成：1.1 从组成部分来看：1 硬件：1 主机：端系统如电脑，手机，物联网设备…2 通讯设备：集线器，交换机，路由器…​                                1
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-30 22:19" pubdate>
-              2024-03-30
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="category-chain-item">计算机网络</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E5%9B%9B%E5%A4%A7%E4%BB%B6/">#四大件</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/04/01/RSA%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/" target="_self">
-          RSA算法实现
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/04/01/RSA%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/" target="_self">
-        <div>
-          12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-04-01 21:51" pubdate>
-              2024-04-01
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E7%AE%97%E6%B3%95%E6%A6%82%E8%AE%BA%E4%BD%9C%E4%B8%9A/" class="category-chain-item">算法概论作业</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/python/">#python</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/04/06/%E6%95%B0%E5%88%97%E6%8E%92%E5%BA%8F/" target="_self">
-          数列排序
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/04/06/%E6%95%B0%E5%88%97%E6%8E%92%E5%BA%8F/" target="_self">
-        <div>
-          123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566#include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;//打印函数void print(int *data,
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-04-06 11:42" pubdate>
-              2024-04-06
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" class="category-chain-item">蓝桥杯</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/C/">#C</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/04/06/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/" target="_self">
-          进制转换
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/04/06/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/" target="_self">
-        <div>
-          十六进制转八进制(包含十六转二)先转二进制再转八进制 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-04-06 22:27" pubdate>
-              2024-04-06
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" class="category-chain-item">蓝桥杯</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/C/">#C</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/04/08/%E5%9B%9E%E6%96%87%E6%95%B0/" target="_self">
-          回文数
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/04/08/%E5%9B%9E%E6%96%87%E6%95%B0/" target="_self">
-        <div>
-          123456789101112131415161718192021222324/* 　　1221是一个非常特殊的数，它从左边读和从右边读是一样的，编程求所有这样的四位十进制数。 */#include &lt;stdio.h&gt;int main()&#123;   for (int i = 1000; i &lt; 9999; i++)   &#123;       int a = i / 10
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-04-08 15:08" pubdate>
-              2024-04-08
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" class="category-chain-item">蓝桥杯</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/C/">#C</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-
-
-  <nav aria-label="navigation">
-    <span class="pagination" id="pagination">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
-    </span>
-  </nav>
-
-
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    
 
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
+<link rel="canonical" href="http://example.com/">
 
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
 
-    
 
-    
-  </main>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
 
-  <footer>
-    <div class="footer-inner">
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>土辛台</title>
   
-    <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
-    </div>
-  
-  
-  
-  
-</div>
-
-  </footer>
-
-  <!-- Scripts -->
-  
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
-
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
-
-
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
-
 
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
 
 
 
 
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
-
-  <script  src="/js/local-search.js" ></script>
 
 
-
-
-
-<!-- 主题的启动项，将它保持在最底部 -->
-<!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
-
-
-  
 
   <noscript>
-    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+    <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">土辛台</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="tuxintai"
+      src="/images/1.gif">
+  <p class="site-author-name" itemprop="name">tuxintai</p>
+  <div class="site-description" itemprop="description">你好</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/15/hi/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1.gif">
+      <meta itemprop="name" content="tuxintai">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="土辛台">
+      <meta itemprop="description" content="你好">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 土辛台">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/04/15/hi/" class="post-title-link" itemprop="url">hi~</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-04-15 22:05:12 / 修改时间：22:06:06" itemprop="dateCreated datePublished" datetime="2024-04-15T22:05:12+08:00">2024-04-15</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><img src="https://raw.githubusercontent.com/tuxintai/tuxintai-PicGoImgs/main/D%3A%5CPicGo%5Cimge/202404152205958.jpg" alt=""></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/06/%E6%95%B0%E5%88%97%E6%8E%92%E5%BA%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1.gif">
+      <meta itemprop="name" content="tuxintai">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="土辛台">
+      <meta itemprop="description" content="你好">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 土辛台">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/04/06/%E6%95%B0%E5%88%97%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">数列排序</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-04-06 11:42:58" itemprop="dateCreated datePublished" datetime="2024-04-06T11:42:58+08:00">2024-04-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-04-11 16:47:56" itemprop="dateModified" datetime="2024-04-11T16:47:56+08:00">2024-04-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" itemprop="url" rel="index"><span itemprop="name">蓝桥杯</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//打印函数</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">print</span><span class="params">(<span class="type">int</span> *data, <span class="type">int</span> n)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++ )</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, data[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//分割函数</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">split</span><span class="params">(<span class="type">int</span> *data, <span class="type">int</span> pre, <span class="type">int</span> rear)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> value = data[pre];<span class="comment">//用第一个数为基准值</span></span><br><span class="line">    <span class="keyword">while</span>(pre &lt; rear)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span> (data[rear] &gt;= value &amp;&amp; pre &lt; rear)</span><br><span class="line">        &#123;</span><br><span class="line">            rear--;</span><br><span class="line">        &#125;</span><br><span class="line">        data[pre] = data[rear];</span><br><span class="line">        <span class="keyword">while</span> (data[pre] &lt; value &amp;&amp; pre &lt; rear)</span><br><span class="line">        &#123;</span><br><span class="line">            pre++;</span><br><span class="line">        &#125;</span><br><span class="line">        data[rear] = data[pre];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    data[pre] = value;</span><br><span class="line">    <span class="keyword">return</span> pre;<span class="comment">//返回基准值，为了方便后序递归调用快速排序时确认下次切割的起始位置</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//快速排序</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">quick_sort</span><span class="params">(<span class="type">int</span> *data, <span class="type">int</span> pre, <span class="type">int</span> rear)</span></span><br><span class="line">&#123;</span><br><span class="line">   </span><br><span class="line">    <span class="keyword">if</span> (pre &lt; rear)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> mid = split(data, pre, rear);</span><br><span class="line">        quick_sort(data, pre, mid - <span class="number">1</span>);</span><br><span class="line">        quick_sort(data, mid + <span class="number">1</span>, rear);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="type">int</span> *data;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    data = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>)*n);</span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;data[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    quick_sort(data, <span class="number">0</span>, n - <span class="number">1</span>);</span><br><span class="line">    print(data, n);</span><br><span class="line">    <span class="built_in">free</span>(data);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/14/%E6%95%B0%E6%8D%AE%E6%8A%93%E5%8F%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1.gif">
+      <meta itemprop="name" content="tuxintai">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="土辛台">
+      <meta itemprop="description" content="你好">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 土辛台">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/04/14/%E6%95%B0%E6%8D%AE%E6%8A%93%E5%8F%96/" class="post-title-link" itemprop="url">数据抓取</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-04-14 09:20:28 / 修改时间：15:40:28" itemprop="dateCreated datePublished" datetime="2024-04-14T09:20:28+08:00">2024-04-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BD%9C%E5%93%81%E8%B5%9B/" itemprop="url" rel="index"><span itemprop="name">作品赛</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>用phpstudy集成环境安装MySQL：<a target="_blank" rel="noopener" href="https://www.itheima.com/news/20191129/171021.html">https://www.itheima.com/news/20191129/171021.html</a></p>
+<p>数据库图形操作页面破解版：<a target="_blank" rel="noopener" href="https://www.exception.site/article/1596">https://www.exception.site/article/1596</a></p>
+<p>​    </p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/11/%E9%98%B6%E4%B9%98%E7%BA%A6%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1.gif">
+      <meta itemprop="name" content="tuxintai">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="土辛台">
+      <meta itemprop="description" content="你好">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 土辛台">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/04/11/%E9%98%B6%E4%B9%98%E7%BA%A6%E6%95%B0/" class="post-title-link" itemprop="url">阶乘约数(算术基本定理)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-04-11 16:32:58 / 修改时间：18:28:03" itemprop="dateCreated datePublished" datetime="2024-04-11T16:32:58+08:00">2024-04-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" itemprop="url" rel="index"><span itemprop="name">蓝桥杯</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="问题：求100！的所有约数"><a href="#问题：求100！的所有约数" class="headerlink" title="问题：求100！的所有约数"></a>问题：求100！的所有约数</h2><h3 id="算术基本定理："><a href="#算术基本定理：" class="headerlink" title="算术基本定理："></a>算术基本定理：</h3><p>​    算术基本定理可表述为：任何一个大于1的自然数n,如果n不为质数，那么n可以唯一分解成有限个质数的乘积</p>
+<script type="math/tex; mode=display">
+n = p_1^{a_1}p_2^{a_2}p_3^{a_3}……</script><script type="math/tex; mode=display">
+则约数的个数为：N = \prod^k_{i=1}(a_i + 1)</script><script type="math/tex; mode=display">
+约数和： s = \prod^k_{ai}(1+p_i+p_i^2+p_i^3+……+p_i^{a_i})</script><p>​    例如：整数24 = 2^3 + 3^1,所以24有 <script type="math/tex">N =(3+1)*(1+1) = 8</script>个约数，约数和为<script type="math/tex">s = (1+2^1+2^2+2^3) * (1+3^1) = 60</script></p>
+<h4 id="法一：用100以内的质数分解"><a href="#法一：用100以内的质数分解" class="headerlink" title="法一：用100以内的质数分解"></a>法一：用100以内的质数分解</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">100!有多少个约数</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">mc += (n /= zs[i]):</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">一次循环计算出1~100中有多少个数是包含质因子的</span></span><br><span class="line"><span class="comment">例如：</span></span><br><span class="line"><span class="comment">第一次除以2：50个数包含1个因子2</span></span><br><span class="line"><span class="comment">第二次除以2：25个数包含2个因子2</span></span><br><span class="line"><span class="comment">第三次除以2：12个数包含3个因子2</span></span><br><span class="line"><span class="comment">第四次除以2：6个数包含4个因子2</span></span><br><span class="line"><span class="comment">第五次除以2：3个数包含5个因子2</span></span><br><span class="line"><span class="comment">第六次除以2：1个数包含6个因子2</span></span><br><span class="line"><span class="comment">所以2的幂是50+25+12+6+3+1=97</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    计算100以内的质数：</span></span><br><span class="line"><span class="comment">    for (int i = 10; i &lt;= 100; i++)</span></span><br><span class="line"><span class="comment">    &#123;</span></span><br><span class="line"><span class="comment">        if (i % 2 &amp;&amp; i % 3 &amp;&amp; i % 5 &amp;&amp; i % 7)</span></span><br><span class="line"><span class="comment">        &#123;</span></span><br><span class="line"><span class="comment">            printf(&quot;%d,&quot;, i);</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        </span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> zs[] = &#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">11</span>,<span class="number">13</span>,<span class="number">17</span>,<span class="number">19</span>,<span class="number">23</span>,<span class="number">29</span>,<span class="number">31</span>,<span class="number">37</span>,<span class="number">41</span>,<span class="number">43</span>,<span class="number">47</span>,<span class="number">53</span>,<span class="number">59</span>,<span class="number">61</span>,<span class="number">67</span>,<span class="number">71</span>,<span class="number">73</span>,<span class="number">79</span>,<span class="number">83</span>,<span class="number">89</span>,<span class="number">97</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> gs = <span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="comment">//计算数组的长度: sizeof zs / sizeof *zs</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="keyword">sizeof</span> zs / <span class="keyword">sizeof</span> *zs; i++)</span><br><span class="line">    &#123;</span><br><span class="line">         <span class="type">int</span> mc = <span class="number">0</span>, n = <span class="number">100</span>;</span><br><span class="line">         <span class="keyword">while</span> (n != <span class="number">0</span>)</span><br><span class="line">         &#123;</span><br><span class="line">            mc += (n /= zs[i]);</span><br><span class="line">        </span><br><span class="line">         &#125;</span><br><span class="line">        </span><br><span class="line">         gs *= mc + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>, gs);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="法二：直接利用2-100遍历找到所有质因子"><a href="#法二：直接利用2-100遍历找到所有质因子" class="headerlink" title="法二：直接利用2~100遍历找到所有质因子"></a>法二：直接利用2~100遍历找到所有质因子</h4><p><em>j是合因子时会在它出现的那一次被直接处理成质因子的乘积</em></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">k!有多少个约数?</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> k;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;k) != EOF) &#123;</span><br><span class="line">        <span class="type">long</span> <span class="type">long</span> p[k + <span class="number">5</span>];<span class="comment">//存质因数的指数</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; k + <span class="number">5</span>; i++) &#123;</span><br><span class="line">            p[i] = <span class="number">0</span>;</span><br><span class="line">        &#125;<span class="comment">//先将数组初始化</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= k; i++) &#123;</span><br><span class="line">            <span class="type">int</span> n = i;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">2</span>; j &lt;= n; j++) &#123;</span><br><span class="line">                <span class="keyword">while</span> (n % j == <span class="number">0</span>) &#123;</span><br><span class="line">                    p[j]++;</span><br><span class="line">                    n = n / j;</span><br><span class="line">                &#125; </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">long</span> <span class="type">long</span> sum = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= k; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (p[i]) &#123;</span><br><span class="line">                sum *= (p[i] + <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>, sum);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/08/%E6%89%A9%E6%95%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1.gif">
+      <meta itemprop="name" content="tuxintai">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="土辛台">
+      <meta itemprop="description" content="你好">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 土辛台">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/04/08/%E6%89%A9%E6%95%A3/" class="post-title-link" itemprop="url">扩散</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-04-08 21:18:46 / 修改时间：22:59:49" itemprop="dateCreated datePublished" datetime="2024-04-08T21:18:46+08:00">2024-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" itemprop="url" rel="index"><span itemprop="name">蓝桥杯</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="解法一：用绝对值直接计算扩散距离"><a href="#解法一：用绝对值直接计算扩散距离" class="headerlink" title="解法一：用绝对值直接计算扩散距离"></a>解法一：用绝对值直接计算扩散距离</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">问题描述</span></span><br><span class="line"><span class="comment">小蓝在一张 无限大 的特殊画布上作画。</span></span><br><span class="line"><span class="comment">这张画布可以看成一个方格图，每个格子可以用一个二维的整数坐标表示。</span></span><br><span class="line"><span class="comment">小蓝在画布上首先点了一下几个点：</span></span><br><span class="line"><span class="comment">(0, 0),(2020, 11),(11, 14),(2000, 2000)</span></span><br><span class="line"><span class="comment">只有这几个格子上有黑色，其它位置都是白色的，每过一分钟，黑色就会扩散一点。</span></span><br><span class="line"><span class="comment">具体的，如果一个格子里面是黑色，它就会扩散到上、下、左、右四个相邻的格子中，使得这四个格子也变成黑色</span></span><br><span class="line"><span class="comment">（如果原来就是黑色，则还是黑色）。</span></span><br><span class="line"><span class="comment">请问，经过 2020 分钟后，画布上有多少个格子是黑色的。</span></span><br><span class="line"><span class="comment">经过2020分钟后：-2020 &lt;= x &lt;= 2020 + 2020; -2020 &lt;= y &lt;= 2000 + 2020</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ZY 2020</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> gs = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">    <span class="comment">//-2020 &lt;= x &lt;= 2020 + 2020; -2020 &lt;= y &lt;= 2000 + 2020</span></span><br><span class="line">    <span class="keyword">for</span> ( x = <span class="number">-2020</span>; x &lt;= <span class="number">2020</span> + <span class="number">2020</span>; x++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> y;</span><br><span class="line">        <span class="keyword">for</span> ( y = <span class="number">-2020</span>; y &lt;= <span class="number">2000</span> + <span class="number">2020</span>; y++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">/*(0, 0),(2020, 11),(11, 14),(2000, 2000)</span></span><br><span class="line"><span class="comment">              distance = |x - x0| + |y - y0|,</span></span><br><span class="line"><span class="comment">              其中，(x0,y0)是初始点的坐标。为了计算曼哈顿距离，</span></span><br><span class="line"><span class="comment">              需要对横坐标差的绝对值和纵坐标差的绝对值进行相加</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">            gs += (<span class="built_in">abs</span>(x - <span class="number">0</span>) + <span class="built_in">abs</span>(y - <span class="number">0</span>) &lt;= ZY)</span><br><span class="line">                ||(<span class="built_in">abs</span>(x - <span class="number">2020</span>) + <span class="built_in">abs</span>(y - <span class="number">11</span>) &lt;= ZY)</span><br><span class="line">                ||(<span class="built_in">abs</span>(x - <span class="number">11</span>) + <span class="built_in">abs</span>(y - <span class="number">14</span>) &lt;= ZY)</span><br><span class="line">                ||(<span class="built_in">abs</span>(x - <span class="number">2000</span>) + <span class="built_in">abs</span>(y - <span class="number">2000</span>) &lt;= ZY);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, gs);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="解法二：利用广度优先搜索（BFS）"><a href="#解法二：利用广度优先搜索（BFS）" class="headerlink" title="解法二：利用广度优先搜索（BFS）"></a>解法二：利用广度优先搜索（BFS）</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">问题描述</span></span><br><span class="line"><span class="comment">小蓝在一张 无限大 的特殊画布上作画。</span></span><br><span class="line"><span class="comment">这张画布可以看成一个方格图，每个格子可以用一个二维的整数坐标表示。</span></span><br><span class="line"><span class="comment">小蓝在画布上首先点了一下几个点：</span></span><br><span class="line"><span class="comment">(0, 0) (2020, 11) (11, 14) (2000, 2000)</span></span><br><span class="line"><span class="comment">只有这几个格子上有黑色，其它位置都是白色的，每过一分钟，黑色就会扩散一点。</span></span><br><span class="line"><span class="comment">具体的，如果一个格子里面是黑色，它就会扩散到上、下、左、右四个相邻的格子中，使得这四个格子也变成黑色</span></span><br><span class="line"><span class="comment">（如果原来就是黑色，则还是黑色）。</span></span><br><span class="line"><span class="comment">请问，经过 2020 分钟后，画布上有多少个格子是黑色的。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">解题思路：利用广度优先搜索思想</span></span><br><span class="line"><span class="comment">    1.先将初始的黑色点加入队列，初始化距离为0</span></span><br><span class="line"><span class="comment">    2.从队列中取出一个格子，检查它相邻的格子：</span></span><br><span class="line"><span class="comment">        a.如果相邻格子未超出画布范围，并且未被访问过(白色)，将其标记为黑色并加入队列</span></span><br><span class="line"><span class="comment">        b.更新格子距离+1</span></span><br><span class="line"><span class="comment">    3.不断重复直到队列为空或者达到指定时间</span></span><br><span class="line"><span class="comment">    4.统计黑格子数</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX_SIZE 10001</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">    <span class="comment">//表示画布上的点</span></span><br><span class="line">    <span class="type">int</span> x, y;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">char</span> g[MAX_SIZE][MAX_SIZE];<span class="comment">//画布</span></span><br><span class="line"><span class="type">int</span> dist[MAX_SIZE][MAX_SIZE];<span class="comment">//到初始点距离</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">dx[0] = -1 表示向左移动一个单位，</span></span><br><span class="line"><span class="comment">dx[1] = 0 表示在x轴上不移动，</span></span><br><span class="line"><span class="comment">dx[2] = 1 表示向右移动一个单位，</span></span><br><span class="line"><span class="comment">dx[3] = 0 表示在 x 轴上不移动。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="type">int</span> dx[<span class="number">4</span>] = &#123;<span class="number">-1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>&#125;;</span><br><span class="line"><span class="type">int</span> dy[<span class="number">4</span>] = &#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">-1</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">广度优先搜索(BFS)</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">bfs</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    memset函数用于将一段内存空间的内容设定为指定的值</span></span><br><span class="line"><span class="comment">    void *memset(void *ptr, int value, size_t num);</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="built_in">memset</span>(dist, <span class="number">-1</span>, <span class="keyword">sizeof</span>(dist));<span class="comment">//将所有元素初始化为-1表示距离未知</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span> *<span class="title">q</span> =</span> <span class="built_in">malloc</span>(MAX_SIZE * MAX_SIZE * <span class="keyword">sizeof</span>(<span class="keyword">struct</span> node));<span class="comment">//分配结构体数组q</span></span><br><span class="line">    <span class="type">int</span> front = <span class="number">0</span>, rear = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//(0, 0) (2020, 11) (11, 14) (2000, 2000)</span></span><br><span class="line">    q[rear++] = (<span class="keyword">struct</span> node)&#123;<span class="number">3000</span>, <span class="number">3000</span>&#125;; dist[<span class="number">3000</span>][<span class="number">3000</span>] = <span class="number">0</span>;<span class="comment">//将初始点(3000,3000)加入队列，并将其到初始点距离设定为0(初始点)</span></span><br><span class="line">    q[rear++] = (<span class="keyword">struct</span> node)&#123;<span class="number">5020</span>, <span class="number">3011</span>&#125;; dist[<span class="number">5020</span>][<span class="number">3011</span>] = <span class="number">0</span>;</span><br><span class="line">    q[rear++] = (<span class="keyword">struct</span> node)&#123;<span class="number">3011</span>, <span class="number">3014</span>&#125;; dist[<span class="number">3011</span>][<span class="number">3014</span>] = <span class="number">0</span>;</span><br><span class="line">    q[rear++] = (<span class="keyword">struct</span> node)&#123;<span class="number">5000</span>, <span class="number">5000</span>&#125;; dist[<span class="number">5000</span>][<span class="number">5000</span>] = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*队列：</span></span><br><span class="line"><span class="comment">    [0][1][2][3][4][5][6][7]</span></span><br><span class="line"><span class="comment">     ^                    ^</span></span><br><span class="line"><span class="comment">    front                rear   front &lt; rear :队列不为空</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">    <span class="keyword">while</span> (front &lt; rear) &#123;</span><br><span class="line">        <span class="class"><span class="keyword">struct</span> <span class="title">node</span> <span class="title">t</span> =</span> q[front++];<span class="comment">//取出队首格子</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//如果当前处理格子距离初始点达到2020，释放队列内存空间</span></span><br><span class="line">        <span class="keyword">if</span> (dist[t.x][t.y] == <span class="number">2020</span>) &#123;</span><br><span class="line">            <span class="built_in">free</span>(q);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;</span><br><span class="line">            <span class="type">int</span> a = t.x + dx[i], b = t.y + dy[i];<span class="comment">//遍历当前格子的四个相邻格子</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (a &lt; <span class="number">0</span> || a &gt;= MAX_SIZE || b &lt; <span class="number">0</span> || b &gt;= MAX_SIZE) <span class="keyword">continue</span>;<span class="comment">//检查相邻格子是否已经超出画布</span></span><br><span class="line">            <span class="keyword">if</span> (g[a][b] == <span class="string">&#x27;*&#x27;</span> || dist[a][b] != <span class="number">-1</span>) <span class="keyword">continue</span>;<span class="comment">//检查格子是否已经黑了或者距离已经被计算过了</span></span><br><span class="line"></span><br><span class="line">            g[a][b] = <span class="string">&#x27;*&#x27;</span>;<span class="comment">//将格子变黑</span></span><br><span class="line">            q[rear++] = (<span class="keyword">struct</span> node)&#123;a, b&#125;;<span class="comment">//将相邻格子加入队尾</span></span><br><span class="line">            dist[a][b] = dist[t.x][t.y] + <span class="number">1</span>;<span class="comment">//计算相邻格子到初始格子距离</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">free</span>(q);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//将所有画布上的点变成白色</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; MAX_SIZE; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; MAX_SIZE; j++) &#123;</span><br><span class="line">            g[i][j] = <span class="string">&#x27;.&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//初始化黑点</span></span><br><span class="line">    g[<span class="number">3000</span>][<span class="number">3000</span>] = <span class="string">&#x27;*&#x27;</span>;</span><br><span class="line">    g[<span class="number">5020</span>][<span class="number">3011</span>] = <span class="string">&#x27;*&#x27;</span>;</span><br><span class="line">    g[<span class="number">3011</span>][<span class="number">3014</span>] = <span class="string">&#x27;*&#x27;</span>;</span><br><span class="line">    g[<span class="number">5000</span>][<span class="number">5000</span>] = <span class="string">&#x27;*&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    bfs();<span class="comment">//调用函数扩散</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//计算黑点数量</span></span><br><span class="line">    <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; MAX_SIZE; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; MAX_SIZE; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (g[i][j] == <span class="string">&#x27;*&#x27;</span>) ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/08/%E6%9F%A5%E6%89%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1.gif">
+      <meta itemprop="name" content="tuxintai">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="土辛台">
+      <meta itemprop="description" content="你好">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 土辛台">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/04/08/%E6%9F%A5%E6%89%BE/" class="post-title-link" itemprop="url">查找</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-04-08 15:59:59 / 修改时间：16:02:01" itemprop="dateCreated datePublished" datetime="2024-04-08T15:59:59+08:00">2024-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" itemprop="url" rel="index"><span itemprop="name">蓝桥杯</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="查找整数存不存在，存在返回位置，不存在返回-1"><a href="#查找整数存不存在，存在返回位置，不存在返回-1" class="headerlink" title="查找整数存不存在，存在返回位置，不存在返回-1"></a>查找整数存不存在，存在返回位置，不存在返回-1</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX 10000</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> s[MAX];</span><br><span class="line">    <span class="type">int</span> n, a, ans;</span><br><span class="line">    ans = <span class="number">-1</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;s[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (a == s[i])</span><br><span class="line">        &#123;</span><br><span class="line">            ans = i + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">break</span>;<span class="comment">//找到就停止</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/08/%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1.gif">
+      <meta itemprop="name" content="tuxintai">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="土辛台">
+      <meta itemprop="description" content="你好">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 土辛台">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/04/08/%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/" class="post-title-link" itemprop="url">杨辉三角</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-04-08 15:42:36 / 修改时间：15:43:19" itemprop="dateCreated datePublished" datetime="2024-04-08T15:42:36+08:00">2024-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" itemprop="url" rel="index"><span itemprop="name">蓝桥杯</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXN 100</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="type">char</span> a[MAXN][MAXN];</span><br><span class="line"></span><br><span class="line">    a[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>;<span class="comment">//第一位是1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> ( <span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">       a[<span class="number">0</span>][i] = a[i][i] = <span class="number">1</span>;<span class="comment">//首列和尾列都是1</span></span><br><span class="line">       <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; i; j++)</span><br><span class="line">       &#123;</span><br><span class="line">            a[i][j] = a[i<span class="number">-1</span>][j] + a[i<span class="number">-1</span>][j<span class="number">-1</span>];<span class="comment">//每个元素都是其上一列对应元素和前一个元素和</span></span><br><span class="line">       &#125;</span><br><span class="line">       </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> ( <span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt;= i; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, a[i][j]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/08/%E5%9B%9E%E6%96%87%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1.gif">
+      <meta itemprop="name" content="tuxintai">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="土辛台">
+      <meta itemprop="description" content="你好">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 土辛台">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/04/08/%E5%9B%9E%E6%96%87%E6%95%B0/" class="post-title-link" itemprop="url">回文数</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-04-08 15:08:29" itemprop="dateCreated datePublished" datetime="2024-04-08T15:08:29+08:00">2024-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-04-12 12:02:36" itemprop="dateModified" datetime="2024-04-12T12:02:36+08:00">2024-04-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" itemprop="url" rel="index"><span itemprop="name">蓝桥杯</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="一-找回四位十进制内的回文数"><a href="#一-找回四位十进制内的回文数" class="headerlink" title="一.找回四位十进制内的回文数"></a>一.找回四位十进制内的回文数</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> 　　1221是一个非常特殊的数，它从左边读和从右边读是一样的，编程求所有这样的四位十进制数。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">   <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1000</span>; i &lt; <span class="number">9999</span>; i++)</span><br><span class="line">   &#123;</span><br><span class="line">       <span class="type">int</span> a = i / <span class="number">1000</span>;</span><br><span class="line">       <span class="type">int</span> b = i / <span class="number">100</span> % <span class="number">10</span> ;</span><br><span class="line">       <span class="type">int</span> c = i / <span class="number">10</span> % <span class="number">10</span>;</span><br><span class="line">       <span class="type">int</span> d = i % <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">if</span> (a == d &amp;&amp; b == c)</span><br><span class="line">       &#123;</span><br><span class="line">           <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, i);</span><br><span class="line">       &#125;</span><br><span class="line">       </span><br><span class="line">   &#125;</span><br><span class="line">   </span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="二-找一个数转置相加后能否得到一个回文数（30步内）"><a href="#二-找一个数转置相加后能否得到一个回文数（30步内）" class="headerlink" title="二.找一个数转置相加后能否得到一个回文数（30步内）"></a>二.找一个数转置相加后能否得到一个回文数（30步内）</h2><h4 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h4><p>​    先输入一个字符串转成10进制数存入数组，转置相加，判断30步内是否能是回文数</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">/*</span></span><br><span class="line"><span class="comment">  　　1221是一个非常特殊的数，它从左边读和从右边读是一样的，编程求所有这样的四位十进制数。</span></span><br><span class="line"><span class="comment">  若一个数（首位不为零）从左向右读与从右向左读都一样，我们就将其称之为回文数。</span></span><br><span class="line"><span class="comment">　　例如：给定一个10进制数56，将56加65（即把56从右向左读），得到121是一个回文数。</span></span><br><span class="line"><span class="comment">　　又如：对于10进制数87：</span></span><br><span class="line"><span class="comment">　　STEP1：87+78 = 165 STEP2：165+561 = 726</span></span><br><span class="line"><span class="comment">　　STEP3：726+627 = 1353 STEP4：1353+3531 = 4884</span></span><br><span class="line"><span class="comment">　　在这里的一步是指进行了一次N进制的加法，上例最少用了4步得到回文数4884。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">　　写一个程序，给定一个N（2&lt;=N&lt;=10或N=16）进制数M（其中16进制数字为0-9与A-F），求最少经过几步可以得到回文数。</span></span><br><span class="line"><span class="comment">　　如果在30步以内（包含30步）不可能得到回文数，则输出“Impossible!</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">char</span> s[<span class="number">1001</span>];</span><br><span class="line"><span class="type">int</span> num[<span class="number">1001</span>];</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">sTOnum</span><span class="params">(<span class="type">char</span> *s, <span class="type">int</span> num[])</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">0</span>; s[i] != <span class="string">&#x27;\0&#x27;</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (s[i] &gt;= <span class="string">&#x27;A&#x27;</span> &amp;&amp; s[i] &lt;= <span class="string">&#x27;F&#x27;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            num[i] = <span class="number">10</span> + s[i] - <span class="string">&#x27;A&#x27;</span>; </span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            num[i] = s[i] - <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">nADDm</span><span class="params">(<span class="type">int</span> num[], <span class="type">int</span> n, <span class="type">int</span> m)</span></span><br><span class="line">&#123; </span><br><span class="line">    <span class="type">int</span> i, *mun, kc;<span class="comment">//定义指针mun来存储num[]的转置，kc是余数</span></span><br><span class="line">    mun = (<span class="type">int</span> *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>)*<span class="number">1001</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        mun[n-i<span class="number">-1</span>] = num[i];</span><br><span class="line">    &#125;</span><br><span class="line">    kc =<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        num[i] = num[i] + mun[i] + kc;</span><br><span class="line">        kc = num[i] / m;</span><br><span class="line">        num[i] = num[i] % m;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (kc &gt; <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        num[n++] = kc;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">free</span>(mun);</span><br><span class="line">    <span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">reserve</span><span class="params">(<span class="type">int</span> num[], <span class="type">int</span> n)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>, j = n <span class="number">-1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span> (i &lt; j &amp;&amp; num[i] == num[j])</span><br><span class="line">    &#123;</span><br><span class="line">        i++;</span><br><span class="line">        j--;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> i &gt;= j;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> <span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line"> &#123;</span><br><span class="line">    <span class="type">int</span> i, n, p;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;p);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, s);<span class="comment">//输入字符串不带&amp;</span></span><br><span class="line">    n = sTOnum(s, num);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; <span class="number">30</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        n = nADDm(num, n, p);</span><br><span class="line">        <span class="keyword">if</span> (reserve(num, n) == <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;STEP=%d\n&quot;</span>, i+<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (i &gt;= <span class="number">30</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;impossible\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/06/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1.gif">
+      <meta itemprop="name" content="tuxintai">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="土辛台">
+      <meta itemprop="description" content="你好">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 土辛台">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/04/06/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/" class="post-title-link" itemprop="url">进制转换</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-04-06 22:27:23" itemprop="dateCreated datePublished" datetime="2024-04-06T22:27:23+08:00">2024-04-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-04-08 12:30:45" itemprop="dateModified" datetime="2024-04-08T12:30:45+08:00">2024-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" itemprop="url" rel="index"><span itemprop="name">蓝桥杯</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="十六进制转八进制-包含十六转二"><a href="#十六进制转八进制-包含十六转二" class="headerlink" title="十六进制转八进制(包含十六转二)"></a>十六进制转八进制(包含十六转二)</h2><p><em>先转二进制再转八进制</em></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> max_size 100000</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//存储二进制数</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">要先把十六进制转二进制，所以c0~c3,四位存储空间来存,c3 c2 c1 c0;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">save_b</span><span class="params">(<span class="type">char</span> *b, <span class="type">char</span> c3, <span class="type">char</span> c2, <span class="type">char</span> c1, <span class="type">char</span> c0, <span class="type">int</span> start)</span></span><br><span class="line">&#123;</span><br><span class="line">    b[start] = c3;</span><br><span class="line">    b[start + <span class="number">1</span>] = c2;</span><br><span class="line">    b[start + <span class="number">2</span>] = c1;</span><br><span class="line">    b[start + <span class="number">3</span>] = c0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//十六进制转二进制</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">h_to_b</span><span class="params">(<span class="type">char</span> *h, <span class="type">char</span> *b)</span>   </span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">int</span> hl = <span class="built_in">strlen</span>(h);<span class="comment">//存储十六进制的数组长度</span></span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; hl; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">switch</span> (h[i])</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="comment">//每个十六进制字符需要占据数组b中四个位置。因此，通过4*i计算出了当前十六进制字符在数组b中的起始位置</span></span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;0&#x27;</span>:</span><br><span class="line">            save_b(b, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="number">4</span>*i);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;1&#x27;</span>:</span><br><span class="line">            save_b(b, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="number">4</span>*i);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;2&#x27;</span>:</span><br><span class="line">            save_b(b, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="number">4</span>*i);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;3&#x27;</span>:</span><br><span class="line">            save_b(b, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="number">4</span>*i);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;4&#x27;</span>:</span><br><span class="line">            save_b(b, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="number">4</span>*i);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;5&#x27;</span>:</span><br><span class="line">            save_b(b, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="number">4</span>*i);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;6&#x27;</span>:</span><br><span class="line">            save_b(b, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="number">4</span>*i);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;7&#x27;</span>:</span><br><span class="line">            save_b(b, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="number">4</span>*i);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;8&#x27;</span>:</span><br><span class="line">            save_b(b, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="number">4</span>*i);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;9&#x27;</span>:</span><br><span class="line">            save_b(b, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="number">4</span>*i);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;A&#x27;</span>:</span><br><span class="line">            save_b(b, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="number">4</span>*i);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;B&#x27;</span>:</span><br><span class="line">            save_b(b, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="number">4</span>*i);</span><br><span class="line">            <span class="keyword">break</span>;    </span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;C&#x27;</span>:</span><br><span class="line">            save_b(b, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="number">4</span>*i);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;D&#x27;</span>:</span><br><span class="line">            save_b(b, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="number">4</span>*i);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;F&#x27;</span>:</span><br><span class="line">            save_b(b, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="number">4</span>*i);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">4</span>*hl ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//二进制转八进制</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">从末端开始遍历：</span></span><br><span class="line"><span class="comment">    更好的处理三位数，比如11010，从末端遍历就是11 010 --&gt;32，从首位便利的话就是110 10 --&gt; 52 出现逻辑错误</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">b_to_o</span><span class="params">(<span class="type">char</span> *b, <span class="type">char</span> *o, <span class="type">int</span> bl)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i, j;</span><br><span class="line">    <span class="type">int</span> ol;</span><br><span class="line">    <span class="keyword">if</span> (bl % <span class="number">3</span> == <span class="number">0</span>)</span><br><span class="line">        ol = bl / <span class="number">3</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        ol = bl / <span class="number">3</span> + <span class="number">1</span>;<span class="comment">//为了完全把二进制位数算进去，整数除法会丢掉小数部分，所以加一</span></span><br><span class="line">    j = bl - <span class="number">1</span>;<span class="comment">//从末端开始遍历</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/*由于二进制字符 &#x27;0&#x27; 的 ASCII 码值为 48，因此通过减去 48 就可以得到对应的数字值。*/</span></span><br><span class="line">    <span class="keyword">for</span> ( i = ol - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (i &gt; <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            o[i] = (b[j] - <span class="number">48</span>) + (b[j<span class="number">-1</span>] - <span class="number">48</span>) * <span class="number">2</span> + (b[j<span class="number">-2</span>] - <span class="number">48</span>) * <span class="number">4</span> + <span class="number">48</span>; <span class="comment">//再转成字符的形式存起来</span></span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">switch</span> (j)</span><br><span class="line">            &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                o[i] = b[j] - <span class="number">48</span> + (b[j<span class="number">-1</span>] - <span class="number">48</span>) * <span class="number">2</span> + (b[j<span class="number">-2</span>] - <span class="number">48</span>) * <span class="number">4</span> + <span class="number">48</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                o[i] = b[j] - <span class="number">48</span> + (b[j<span class="number">-1</span>] - <span class="number">48</span>) * <span class="number">2</span> + <span class="number">48</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">                o[i] = b[j];</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        j = j - <span class="number">3</span>;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ol;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">print_o</span><span class="params">(<span class="type">char</span> *o, <span class="type">int</span> ol)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (o[<span class="number">0</span>] == <span class="string">&#x27;0&#x27;</span>)<span class="comment">//去除首位0</span></span><br><span class="line">        i = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (; i &lt; ol; i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>, o[i]);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> h[max_size];</span><br><span class="line">    <span class="type">char</span> b[<span class="number">4</span> * max_size];</span><br><span class="line">    <span class="type">char</span> o[<span class="number">4</span> * max_size / <span class="number">3</span> + <span class="number">1</span>];</span><br><span class="line">    <span class="type">int</span> n, i, bl, ol;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    getchar();<span class="comment">//清除换行符，使用scanf函数读取整数n之后，输入缓冲区中可能会残留一个换行符（用户回车键产生）</span></span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        gets(h);</span><br><span class="line">        bl = h_to_b(h, b);</span><br><span class="line">        ol = b_to_o(b, o, bl);</span><br><span class="line"></span><br><span class="line">        print_o(o, ol);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="十六进制转十进制"><a href="#十六进制转十进制" class="headerlink" title="十六进制转十进制"></a>十六进制转十进制</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">double</span> sum = <span class="number">0</span>, x;</span><br><span class="line">    <span class="type">char</span> a[<span class="number">8</span>];<span class="comment">//不超过8位的正的十六进制数字符串</span></span><br><span class="line">    <span class="type">int</span> len, i = <span class="number">0</span>;</span><br><span class="line">    gets(a);</span><br><span class="line">    len = <span class="built_in">strlen</span>(a);</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    1.&#x27;0&#x27;的ASCII是48，&#x27;A&#x27;的ASCII是65，&#x27;7&#x27;ASCII是55,</span></span><br><span class="line"><span class="comment">    所以当a[len-1]对应&quot;A~F&quot;时，a[len-1] - &#x27;7&#x27;对应</span></span><br><span class="line"><span class="comment">    10~15。</span></span><br><span class="line"><span class="comment">    2.i对应16进制的权重，从左向右递增所以i++,先i后加1</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">while</span> (len)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (a[len<span class="number">-1</span>] &gt;= <span class="string">&#x27;A&#x27;</span> &amp;&amp; a[len<span class="number">-1</span>] &lt;= <span class="string">&#x27;F&#x27;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            x = (a[len<span class="number">-1</span>] - <span class="string">&#x27;7&#x27;</span>) * <span class="built_in">pow</span>(<span class="number">16</span>, i++);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            x = (a[len<span class="number">-1</span>] - <span class="string">&#x27;0&#x27;</span>) * <span class="built_in">pow</span>(<span class="number">16</span>, i++);</span><br><span class="line">        &#125;</span><br><span class="line">        sum += x;</span><br><span class="line">        len--;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%.0lf&quot;</span>, sum);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="十进制转十六进制"><a href="#十进制转十六进制" class="headerlink" title="十进制转十六进制"></a>十进制转十六进制</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//构建十六进制数组</span></span><br><span class="line"><span class="type">char</span> data[] = &#123;<span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;3&#x27;</span>, <span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;5&#x27;</span>, <span class="string">&#x27;6&#x27;</span>, <span class="string">&#x27;7&#x27;</span>, <span class="string">&#x27;8&#x27;</span>, <span class="string">&#x27;9&#x27;</span>, <span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>, <span class="string">&#x27;E&#x27;</span>, <span class="string">&#x27;F&#x27;</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//十进制转十六进制</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">模16的余数对应data[余数]的字符串顺序存储在数组num[n]中</span></span><br><span class="line"><span class="comment">返回数组下标n</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">Transform</span><span class="params">(<span class="type">char</span> *num, <span class="type">long</span> <span class="type">long</span> value)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (value &gt;= <span class="number">16</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        num[n++] = data[value % <span class="number">16</span>];</span><br><span class="line">        value /= <span class="number">16</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    num[n++] = data[value % <span class="number">16</span>];</span><br><span class="line">    <span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//逆序打印</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">Print</span><span class="params">(<span class="type">char</span> *num, <span class="type">int</span> n)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i ;</span><br><span class="line">    <span class="keyword">for</span> ( i = n - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>, num[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> value;</span><br><span class="line">    <span class="type">char</span> num[<span class="number">10</span>];</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>, &amp;value);</span><br><span class="line">    n = Transform(num, value);</span><br><span class="line">    Print(num, n);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/01/RSA%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1.gif">
+      <meta itemprop="name" content="tuxintai">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="土辛台">
+      <meta itemprop="description" content="你好">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 土辛台">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/04/01/RSA%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/" class="post-title-link" itemprop="url">RSA算法实现</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-04-01 21:51:22 / 修改时间：21:57:30" itemprop="dateCreated datePublished" datetime="2024-04-01T21:51:22+08:00">2024-04-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95%E6%A6%82%E8%AE%BA%E4%BD%9C%E4%B8%9A/" itemprop="url" rel="index"><span itemprop="name">算法概论作业</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 信安</span></span><br><span class="line"><span class="comment"># 土辛台</span></span><br><span class="line"><span class="comment"># 开发时间  23:01</span></span><br><span class="line"><span class="comment">#实现RSA算法分7步</span></span><br><span class="line"><span class="comment">#1. 选择一对不相等的素数p,q: 用到素数检验（费马小定理）</span></span><br><span class="line"><span class="comment">#2，令n = p * q</span></span><br><span class="line"><span class="comment">#3. 计算n的欧拉函数phi_n = (p - 1) * (q - 1)</span></span><br><span class="line"><span class="comment">#4，选一个和n互素的整数 e = 3</span></span><br><span class="line"><span class="comment">#5. 计算e模phi_n的逆元d: 用到扩展欧几里得算法</span></span><br><span class="line"><span class="comment">#6. 公钥KU = (e, n)</span></span><br><span class="line"><span class="comment">#7. 私钥KR = (d, p, q)</span></span><br><span class="line"><span class="comment">#明文M --&gt;加密： M^e mod n = C： 模乘</span></span><br><span class="line"><span class="comment">#密文C --&gt;解密： C^d mod n = M： 模乘</span></span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="keyword">import</span>  random</span><br><span class="line"><span class="comment">#模乘</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">power</span>(<span class="params">base, exponent, modulus</span>):</span><br><span class="line">    result = <span class="number">1</span></span><br><span class="line">    base = base % modulus<span class="comment">#对底数取模，防止溢出</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> exponent &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">if</span> exponent % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">            result = (result * base) % modulus</span><br><span class="line">        exponent = exponent // <span class="number">2</span></span><br><span class="line">        base = (base * base) % modulus</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"><span class="comment">#a = power(4, 2, 5)</span></span><br><span class="line"><span class="comment">#print(a)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#费马测试</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fermat_test</span>(<span class="params">a, N</span>):</span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    费马小定理：</span></span><br><span class="line"><span class="string">        如果N是素数，则a^(N-1) - 1 能被 N 整除</span></span><br><span class="line"><span class="string">        a^(N-1) mod N = 1;</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">if</span> N == <span class="number">2</span>:<span class="comment">#2是素数</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">if</span> N % <span class="number">2</span> == <span class="number">0</span>:<span class="comment">#能被2整除的不是素数</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">return</span> power(a, N - <span class="number">1</span>, N) == <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#b = fermat_test(7, 13)</span></span><br><span class="line"><span class="comment">#print(b)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#素性测试</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">is_prime</span>(<span class="params">N, rounds = <span class="number">5</span></span>):</span><br><span class="line">    <span class="keyword">if</span> N &lt;= <span class="number">1</span>:<span class="comment">#小于等于1的不是素数</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">if</span> N &lt;= <span class="number">3</span>:<span class="comment">#2，3是素数</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(rounds):</span><br><span class="line">        <span class="comment">#随机生成2到N-1的数去测试</span></span><br><span class="line">        a = random.randint(<span class="number">2</span>, N - <span class="number">1</span>)</span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        random.randint(a,b)是python标准库中&#x27;random&#x27;模块提供的函数</span></span><br><span class="line"><span class="string">        用于随机生成(a,b)之间的整数</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> fermat_test(a, N):</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#a = is_prime(139)</span></span><br><span class="line"><span class="comment">#print(a)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#随机生成素数p</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">random_prime</span>(<span class="params">low, high</span>):</span><br><span class="line">    p = random.randint(low, high)</span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">not</span> is_prime(p):</span><br><span class="line">        p = random.randint(low, high)</span><br><span class="line">    <span class="keyword">return</span> p</span><br><span class="line"></span><br><span class="line"><span class="comment">#欧几里得返回向量（d, x, y)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">ext_gcd</span>(<span class="params">a,b</span>):</span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    利用递归实现欧几里得算法：</span></span><br><span class="line"><span class="string">        a &gt; b: a = b*q + r, 如果 r=0 ,b就是最大公约数d,否则将b赋值给a，r赋值给b，返回上一步。———&gt;算出最大公约数d</span></span><br><span class="line"><span class="string">    用扩展欧几里得算法算出系数x,y:</span></span><br><span class="line"><span class="string">        a&gt;b: b=0时，d=a, x=1, y=0</span></span><br><span class="line"><span class="string">        a = (a/b)*b + a%b:</span></span><br><span class="line"><span class="string">        gcd(a,b) = x*a + y*b  -&gt;1</span></span><br><span class="line"><span class="string">        gcd(b,a%b) = x&#x27;*b + y&#x27;*(a%b) -&gt;2</span></span><br><span class="line"><span class="string">        结合1,2--&gt; x*a + y*b = x&#x27;*b + y&#x27;* a%b 又a%b= a-(a/b)*b</span></span><br><span class="line"><span class="string">        --&gt;x*a + y*b = x&#x27;*b + y&#x27;*[a-(a/b)*b] = y&#x27;*a + x&#x27;-y&#x27;(a/b)*b</span></span><br><span class="line"><span class="string">        --&gt; x = y&#x27;, y = x&#x27;-y&#x27;(a/b)</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> b == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> a, <span class="number">1</span>, <span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        d, x, y = ext_gcd(b, a % b)</span><br><span class="line">        <span class="keyword">return</span> d, y, x - (a // b)*y</span><br><span class="line"></span><br><span class="line"><span class="comment">#计算模逆</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">inv_mod</span>(<span class="params">a, m</span>):</span><br><span class="line">    d, x, y = ext_gcd(a, m)</span><br><span class="line">    <span class="keyword">if</span> d != <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">raise</span> ValueError(<span class="string">&quot;Inverse does not exist&quot;</span>)<span class="comment">#抛出异常</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> (x % m + m) % m<span class="comment">#确保模逆在[0,b)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#生成密钥</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">rsa_keygen</span>(<span class="params">k</span>):</span><br><span class="line">    <span class="comment">#随机生成位于(2^(k-1), 2^k) 的数p,q</span></span><br><span class="line">    p = random_prime(<span class="number">2</span>**(k-<span class="number">1</span>), <span class="number">2</span>**k)</span><br><span class="line">    q = random_prime(<span class="number">2</span>**(k-<span class="number">1</span>), <span class="number">2</span>**k)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#避免p = q</span></span><br><span class="line">    <span class="keyword">while</span> p == q:</span><br><span class="line">        q = random_prime(<span class="number">2</span>**(k - <span class="number">1</span>), <span class="number">2</span>**k)</span><br><span class="line">    <span class="comment">#大整数N：</span></span><br><span class="line">    N = p*q</span><br><span class="line">    <span class="comment">#求欧拉函数：</span></span><br><span class="line">    phi_N = (p -<span class="number">1</span>) * (q -<span class="number">1</span>)</span><br><span class="line">    <span class="comment">#定义e = 3</span></span><br><span class="line">    e = <span class="number">3</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#确保模逆的存在</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        d = inv_mod(e, phi_N)</span><br><span class="line">    <span class="keyword">except</span> ValueError:</span><br><span class="line">        <span class="keyword">return</span> rsa_keygen(k)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#生成公钥私钥：</span></span><br><span class="line">    pubkey = (e, N)</span><br><span class="line">    prikey = (d, p, q)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ( pubkey, prikey)</span><br><span class="line"></span><br><span class="line"><span class="comment">#加密</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">enc</span>(<span class="params">m_text, pubkey</span>):</span><br><span class="line"></span><br><span class="line">    e = pubkey[<span class="number">0</span>]</span><br><span class="line">    N = pubkey[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">isinstance</span>(m_text, <span class="built_in">str</span>):</span><br><span class="line">        <span class="comment">#ord 接受一个字符作为参数，返回一个ASCII码</span></span><br><span class="line">        Unicode_m_text = [<span class="built_in">ord</span>(char) <span class="keyword">for</span> char <span class="keyword">in</span> m_text]</span><br><span class="line">        ciphertext = [power(char, e, N) <span class="keyword">for</span> char <span class="keyword">in</span> Unicode_m_text]</span><br><span class="line">    <span class="keyword">elif</span> <span class="built_in">isinstance</span>(m_text, <span class="built_in">int</span>):</span><br><span class="line">        ciphertext = power(m_text, e, N)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Encryption of non-str, int data types is not currently supported.&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ciphertext</span><br><span class="line"></span><br><span class="line"><span class="comment">#解密</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">dec</span>(<span class="params">e_text, prikey</span>):</span><br><span class="line"></span><br><span class="line">    d, p, q = prikey</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">isinstance</span>(e_text, <span class="built_in">list</span>):</span><br><span class="line">        decrypted_str = [power(char, d, p * q) <span class="keyword">for</span> char <span class="keyword">in</span> e_text]</span><br><span class="line">        <span class="comment">#chr接受一个ASCII码作为参数，返回对应的字符</span></span><br><span class="line">        decrypt = <span class="string">&#x27;&#x27;</span>.join([<span class="built_in">chr</span>(code) <span class="keyword">for</span> code <span class="keyword">in</span> decrypted_str])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        decrypt = power(e_text, d, p * q)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> decrypt</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    pubkey, prikey = rsa_keygen(<span class="number">128</span>)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;公钥：&quot;</span>, pubkey)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;私钥：&quot;</span>, prikey)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 对314加密和解密</span></span><br><span class="line">    message = <span class="number">314</span></span><br><span class="line">    encrypted = enc(message, pubkey)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;314加密后的信息为：&quot;</span>, encrypted)</span><br><span class="line">    decrypted = dec(encrypted, prikey)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;解密后的信息是：&quot;</span>, decrypted)</span><br><span class="line"></span><br><span class="line">    message = <span class="string">&quot;芙蓉王源&quot;</span></span><br><span class="line">    encrypted = enc(message, pubkey)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;芙蓉王源加密后的信息为：&quot;</span>, encrypted)</span><br><span class="line">    decrypted = dec(encrypted, prikey)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;解密后的信息是：&quot;</span>, decrypted)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">tuxintai</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div><script type="module">import * as THREE from "/lib/three.js"; window.THREE = THREE;</script>
+
+    </div>
+  </footer>
+
+  
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
 
 </body>
 </html>
